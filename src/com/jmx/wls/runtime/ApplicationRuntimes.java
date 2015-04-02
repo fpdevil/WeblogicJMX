@@ -88,23 +88,23 @@ public class ApplicationRuntimes {
 		}
 	}
 
-	public static void main(String[] args) throws Exception {
-		
-		ApplicationRuntimes ar = new ApplicationRuntimes();
-		
-		if (args.length == 0) {
-			wsc.usage();
-			System.exit(1);
-		}
-
-		String hostname = args[0];
-		String portString = args[1];
-		String username = args[2];
-		String password = args[3];
-		
-		wsc.initConnection(hostname, portString, username, password);
-		ar.getDeploymentsInfo();
-		ar.displayStats(ar.getDeploymentListMap());
-		wsc.closeConnection();
-	}
+//	public static void main(String[] args) throws Exception {
+//		
+//		ApplicationRuntimes ar = new ApplicationRuntimes();
+//		
+//		if (args.length == 0) {
+//			wsc.usage();
+//			System.exit(1);
+//		}
+//
+//		String hostname = args[0];
+//		String portString = args[1];
+//		String username = args[2];
+//		String password = args[3];
+//		
+//		wsc.initConnection(hostname, portString, username, password);
+//		ar.getDeploymentsInfo();
+//		ar.displayStats(ar.getDeploymentListMap());
+//		wsc.closeConnection();
+//	}
 }

@@ -78,28 +78,28 @@ public class ServerRuntimes {
 		}
 	}
 	
-	public static void main(String[] args) throws AttributeNotFoundException, InstanceNotFoundException, MBeanException, ReflectionException, IOException {
-		if (args.length == 0) {
-			wsc.usage();
-			System.exit(1);
-		}
-
-		String hostname = args[0];
-		String portString = args[1];
-		String username = args[2];
-		String password = args[3];
-		
-		ServerRuntimes sr = new ServerRuntimes();
-		
-		wsc.initConnection(hostname, portString, username, password);
-
-		for (int i = 0; i < sr.serverRT().length; i++) {
-			System.out.println("----------------------------------------------");
-			sr.getServerRuntimeInfo(sr.serverRT()[i]);
-			ServerRuntimes.displayStats(sr.getServerRTMap());
-		}
-		
-		wsc.closeConnection();
-	}
+//	public static void main(String[] args) throws AttributeNotFoundException, InstanceNotFoundException, MBeanException, ReflectionException, IOException {
+//		if (args.length == 0) {
+//			wsc.usage();
+//			System.exit(1);
+//		}
+//
+//		String hostname = args[0];
+//		String portString = args[1];
+//		String username = args[2];
+//		String password = args[3];
+//		
+//		ServerRuntimes sr = new ServerRuntimes();
+//		
+//		wsc.initConnection(hostname, portString, username, password);
+//
+//		for (int i = 0; i < sr.serverRT().length; i++) {
+//			System.out.println("----------------------------------------------");
+//			sr.getServerRuntimeInfo(sr.serverRT()[i]);
+//			ServerRuntimes.displayStats(sr.getServerRTMap());
+//		}
+//		
+//		wsc.closeConnection();
+//	}
 
 }
